@@ -6,7 +6,6 @@ var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
     var title = queryData.id;
-    console.log('1: ', queryData.id);
     if(_url == '/'){
       title = 'Welcome';
     }
@@ -28,6 +27,7 @@ var app = http.createServer(function(request,response){
           <h1><a href="/">WEB</a></h1>
           <ol>
             <li><a href="/?id=nodejs1">nodejs1</a></li>
+            <li><a href="/?id=nodejs2">nodejs2</a></li>
           </ol>
           <h2>${title}</h2>
           <p>${description}</p>
